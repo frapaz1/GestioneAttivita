@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/tests[1]_tests.cmake")
+  include("C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/tests[1]_tests.cmake")
+else()
+  add_test(tests_NOT_BUILT tests_NOT_BUILT)
+endif()

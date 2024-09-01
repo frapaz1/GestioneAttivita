@@ -1,0 +1,21 @@
+# ninja log v5
+1571	1617	7468889742017555	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	986a1ee07f7b9a50
+0	52	7468889726365031	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	fb6a777402b19646
+1425	1474	7468889740583397	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	ed189481afbc2865
+1425	1474	7468889740583397	C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	ed189481afbc2865
+0	52	7468889726365031	C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	fb6a777402b19646
+52	1424	7468889740081830	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	d86a2df3d4dddb45
+1660	1706	7468889742906606	C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	3bf3d81e82df51ed
+52	1424	7468889740081830	C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	d86a2df3d4dddb45
+1474	1521	7468889741048160	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	c4ddfaa355579470
+1474	1521	7468889741048160	C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	c4ddfaa355579470
+1521	1571	7468889741555277	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	888aff77d72e72f
+1707	1769	7468889743541176	CMakeFiles/googletest-populate-complete	65cd99b5eb07aea6
+1521	1571	7468889741555277	C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	888aff77d72e72f
+1571	1617	7468889742017555	C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	986a1ee07f7b9a50
+1617	1660	7468889742449015	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	eff264b18f9cd6c
+1617	1660	7468889742449015	C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	eff264b18f9cd6c
+1660	1706	7468889742906606	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	3bf3d81e82df51ed
+1707	1769	7468889743541176	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	65cd99b5eb07aea6
+1707	1769	7468889743541176	C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	65cd99b5eb07aea6
+1707	1769	7468889743541176	C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	65cd99b5eb07aea6
