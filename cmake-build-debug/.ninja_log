@@ -1,6 +1,10 @@
 # ninja log v5
-457	560	7468895620796044	GestioneAttivita.exe	3a778965f5b20b25
-4	546	7468889163012461	CMakeFiles/GestioneAttivita.dir/attivita.cpp.obj	8dde02726f4b51c4
-2	220	7468898165179701	build.ninja	46863310b8da4e72
-2	456	7468895619796738	CMakeFiles/GestioneAttivita.dir/main.cpp.obj	7eda312a5352db71
-1	505	7468898165179701	build.ninja	46863310b8da4e72
+594	722	7471693714812330	GestioneAttivita.exe	133aeccf068a404a
+7	481	7471693712377190	CMakeFiles/GestioneAttivita.dir/attivita.cpp.obj	8dde02726f4b51c4
+1	3447	7471701535445857	build.ninja	46863310b8da4e72
+12	496	7471693712586178	CMakeFiles/GestioneAttivita.dir/main.cpp.obj	7eda312a5352db71
+2	594	7471693713571955	CMakeFiles/GestioneAttivita.dir/lista_attivita.cpp.obj	e01b7e97b28d0a3e
+9	484	7471703302426206	CMakeFiles/GestioneAttivita.dir/attivita.cpp.obj	8dde02726f4b51c4
+16	527	7471703302907210	CMakeFiles/GestioneAttivita.dir/main.cpp.obj	7eda312a5352db71
+3	629	7471703303927189	CMakeFiles/GestioneAttivita.dir/lista_attivita.cpp.obj	e01b7e97b28d0a3e
+632	836	7471703305943038	GestioneAttivita.exe	133aeccf068a404a

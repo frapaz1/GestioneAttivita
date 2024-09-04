@@ -61,6 +61,12 @@ build CMakeFiles/GestioneAttivita.dir/attivita.cpp.obj: CXX_COMPILER__GestioneAt
   OBJECT_DIR = CMakeFiles\GestioneAttivita.dir
   OBJECT_FILE_DIR = CMakeFiles\GestioneAttivita.dir
 
+build CMakeFiles/GestioneAttivita.dir/lista_attivita.cpp.obj: CXX_COMPILER__GestioneAttivita_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/lista_attivita.cpp || cmake_object_order_depends_target_GestioneAttivita
+  DEP_FILE = CMakeFiles\GestioneAttivita.dir\lista_attivita.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\GestioneAttivita.dir
+  OBJECT_FILE_DIR = CMakeFiles\GestioneAttivita.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target GestioneAttivita
@@ -69,7 +75,7 @@ build CMakeFiles/GestioneAttivita.dir/attivita.cpp.obj: CXX_COMPILER__GestioneAt
 #############################################
 # Link the executable GestioneAttivita.exe
 
-build GestioneAttivita.exe: CXX_EXECUTABLE_LINKER__GestioneAttivita_Debug CMakeFiles/GestioneAttivita.dir/main.cpp.obj CMakeFiles/GestioneAttivita.dir/attivita.cpp.obj
+build GestioneAttivita.exe: CXX_EXECUTABLE_LINKER__GestioneAttivita_Debug CMakeFiles/GestioneAttivita.dir/main.cpp.obj CMakeFiles/GestioneAttivita.dir/attivita.cpp.obj CMakeFiles/GestioneAttivita.dir/lista_attivita.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\GestioneAttivita.dir

@@ -1,9 +1,11 @@
 #include "attivita.h"
+#include "lista_attivita.h"
 #include <iostream>
+#include <stdexcept>
 
 int main() {
     ListaAttivita lista;
-    std::string nome, descrizione;
+    std::string nome, descrizione, data;
 
     std::cout << "Inserisci le attivita (digita 'fine' per terminare):" << std::endl;
 
@@ -16,10 +18,14 @@ int main() {
         std::getline(std::cin, descrizione);
         if (descrizione == "fine") break;
 
+        std::cout << "Data dell'attivita (formato YYYY-MM-DD): ";
+        std::getline(std::cin, data);
+        if (data == "fine") break;
+
         try {
-            lista.aggiungiAttivita(Attivita(nome, descrizione));
+            lista.aggiungiAttivita(Attivita(nome, descrizione, data));
         } catch (const std::invalid_argument& e) {
-            std::cerr << "Errore: " << e.what() << std::endl;
+            std::cout << "Errore: " << e.what() << std::endl;
         }
     }
 
@@ -28,7 +34,7 @@ int main() {
     try {
         lista.salvaSuDisco(nomeFile);
     } catch (const std::ios_base::failure& e) {
-        std::cerr << "Errore durante il salvataggio del file: " << e.what() << std::endl;
+        std::cout << "Errore durante il salvataggio del file: " << e.what() << std::endl;
         return 1;
     }
 
@@ -36,7 +42,7 @@ int main() {
     try {
         nuovaLista.caricaDaDisco(nomeFile);
     } catch (const std::ios_base::failure& e) {
-        std::cerr << "Errore durante il caricamento del file: " << e.what() << std::endl;
+        std::cout << "Errore durante il caricamento del file: " << e.what() << std::endl;
         return 1;
     }
 
@@ -49,6 +55,23 @@ int main() {
         if (nome == "fine") break;
 
         nuovaLista.contrassegnaComeCompletata(nome);
+    }
+
+    std::cout << "Vuoi cercare un'attivita per nome? (digita 'fine' per terminare):" << std::endl;
+    while (true) {
+        std::cout << "Nome dell'attivita da cercare: ";
+        std::getline(std::cin, nome);
+        if (nome == "fine") break;
+
+        Attivita* attivita = nuovaLista.cercaAttivita(nome);
+        if (attivita) {
+            std::cout << "Attivita trovata: " << attivita->getNome()
+                      << ", Descrizione: " << attivita->getDescrizione()
+                      << ", Data: " << attivita->getData()
+                      << ", Completata: " << (attivita->isCompletata() ? "Si" : "No") << std::endl;
+        } else {
+            std::cout << "Attivita con nome '" << nome << "' non trovata." << std::endl;
+        }
     }
 
     nuovaLista.mostraElenco();
