@@ -4,5 +4,6 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-include("C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/GestioneAttivitaTests[1]_include.cmake")
+add_test(attivita_log_test "C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/attivita_log_test.exe")
+set_tests_properties(attivita_log_test PROPERTIES  _BACKTRACE_TRIPLES "C:/Users/frano/CLionProjects/ListaAttivita/CMakeLists.txt;35;add_test;C:/Users/frano/CLionProjects/ListaAttivita/CMakeLists.txt;0;")
 subdirs("_deps/googletest-build")

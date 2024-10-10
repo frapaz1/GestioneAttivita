@@ -6,7 +6,7 @@
 
 class Attivita {
 public:
-    Attivita(const std::string& nome, const std::string& descrizione, std::basic_string<char> data, bool completata = false);
+    Attivita(const std::string& nome, const std::string& descrizione, std::string data, bool completata = false);
     Attivita(const std::string& csvLine);
 
     std::string getNome() const;
@@ -22,6 +22,8 @@ public:
     std::string toCSV() const;
 
 private:
+    bool dataValida(const std::string& data) const;
+
     std::string nome;
     std::string descrizione;
     std::string data;

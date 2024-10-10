@@ -1,29 +1,35 @@
 cmake_minimum_required(VERSION 3.10)
-project(GestioneAttivita)
+project(AttivitaLog)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(GestioneAttivita main.cpp attivita.cpp
-        lista_attivita.cpp)
+include_directories(${PROJECT_SOURCE_DIR})
 
-cmake_minimum_required(VERSION 3.10)
-project(GestioneAttivita)
+set(SOURCES
+        main.cpp
+        attivita.cpp
+        lista_attivita.cpp
+)
 
-set(CMAKE_CXX_STANDARD 17)
+add_executable(attivita_log ${SOURCES})
 
 include(FetchContent)
 FetchContent_Declare(
         googletest
-        URL https://github.com/google/googletest/archive/refs/heads/main.zip
+        URL https://github.com/google/googletest/archive/refs/tags/release-1.12.1.zip
 )
+
 FetchContent_MakeAvailable(googletest)
+
 enable_testing()
 
-add_executable(GestioneAttivitaApp main.cpp attivita.cpp)
+set(TEST_SOURCES
+        test/test.cpp
+)
 
-add_executable(GestioneAttivitaTests test.cpp attivita.cpp)
+add_executable(attivita_log_test ${TEST_SOURCES} ${SOURCES})
 
-target_link_libraries(GestioneAttivitaTests gtest_main)
+target_link_libraries(attivita_log_test gtest gtest_main)
 
-include(GoogleTest)
-gtest_discover_tests(GestioneAttivitaTests)
+add_test(NAME attivita_log_test COMMAND attivita_log_test)

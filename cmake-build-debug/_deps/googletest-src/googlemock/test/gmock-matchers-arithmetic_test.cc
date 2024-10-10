@@ -31,18 +31,15 @@
 //
 // This file tests some commonly used argument matchers.
 
-#include <cmath>
-#include <limits>
-#include <memory>
-#include <string>
-
-#include "gmock/gmock.h"
-#include "test/gmock-matchers_test.h"
-#include "gtest/gtest.h"
-
 // Silence warning C4244: 'initializing': conversion from 'int' to 'short',
 // possible loss of data and C4100, unreferenced local parameter
-GTEST_DISABLE_MSC_WARNINGS_PUSH_(4244 4100)
+#ifdef _MSC_VER
+#pragma warning(push)
+#pragma warning(disable : 4244)
+#pragma warning(disable : 4100)
+#endif
+
+#include "test/gmock-matchers_test.h"
 
 namespace testing {
 namespace gmock_matchers_test {
@@ -561,9 +558,10 @@ TEST_P(AllOfTestP, ExplainsResult) {
   Matcher<int> m;
 
   // Successful match.  Both matchers need to explain.  The second
-  // matcher doesn't give an explanation, so the matcher description is used.
+  // matcher doesn't give an explanation, so only the first matcher's
+  // explanation is printed.
   m = AllOf(GreaterThan(10), Lt(30));
-  EXPECT_EQ("which is 15 more than 10, and is < 30", Explain(m, 25));
+  EXPECT_EQ("which is 15 more than 10", Explain(m, 25));
 
   // Successful match.  Both matchers need to explain.
   m = AllOf(GreaterThan(10), GreaterThan(20));
@@ -573,9 +571,8 @@ TEST_P(AllOfTestP, ExplainsResult) {
   // Successful match.  All matchers need to explain.  The second
   // matcher doesn't given an explanation.
   m = AllOf(GreaterThan(10), Lt(30), GreaterThan(20));
-  EXPECT_EQ(
-      "which is 15 more than 10, and is < 30, and which is 5 more than 20",
-      Explain(m, 25));
+  EXPECT_EQ("which is 15 more than 10, and which is 5 more than 20",
+            Explain(m, 25));
 
   // Successful match.  All matchers need to explain.
   m = AllOf(GreaterThan(10), GreaterThan(20), GreaterThan(30));
@@ -590,10 +587,10 @@ TEST_P(AllOfTestP, ExplainsResult) {
   EXPECT_EQ("which is 5 less than 10", Explain(m, 5));
 
   // Failed match.  The second matcher, which failed, needs to
-  // explain.  Since it doesn't given an explanation, the matcher text is
+  // explain.  Since it doesn't given an explanation, nothing is
   // printed.
   m = AllOf(GreaterThan(10), Lt(30));
-  EXPECT_EQ("which doesn't match (is < 30)", Explain(m, 40));
+  EXPECT_EQ("", Explain(m, 40));
 
   // Failed match.  The second matcher, which failed, needs to
   // explain.
@@ -957,7 +954,7 @@ TEST(AllArgsTest, WorksForNonTuple) {
 
 class AllArgsHelper {
  public:
-  AllArgsHelper() = default;
+  AllArgsHelper() {}
 
   MOCK_METHOD2(Helper, int(char x, int y));
 
@@ -978,7 +975,7 @@ TEST(AllArgsTest, WorksInWithClause) {
 
 class OptionalMatchersHelper {
  public:
-  OptionalMatchersHelper() = default;
+  OptionalMatchersHelper() {}
 
   MOCK_METHOD0(NoArgs, int());
 
@@ -1040,7 +1037,7 @@ class FloatingPointTest : public testing::Test {
             Floating::ReinterpretBits(infinity_bits_ - max_ulps_)),
         further_from_infinity_(
             Floating::ReinterpretBits(infinity_bits_ - max_ulps_ - 1)),
-        max_(std::numeric_limits<RawType>::max()),
+        max_(Floating::Max()),
         nan1_(Floating::ReinterpretBits(Floating::kExponentBitMask | 1)),
         nan2_(Floating::ReinterpretBits(Floating::kExponentBitMask | 200)) {}
 
@@ -1515,4 +1512,6 @@ TEST(AnyOfTest, WorksOnMoveOnlyType) {
 }  // namespace gmock_matchers_test
 }  // namespace testing
 
-GTEST_DISABLE_MSC_WARNINGS_POP_()  // 4244 4100
+#ifdef _MSC_VER
+#pragma warning(pop)
+#endif

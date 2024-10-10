@@ -31,15 +31,15 @@
 
 set -euox pipefail
 
-readonly LINUX_LATEST_CONTAINER="gcr.io/google.com/absl-177019/linux_hybrid-latest:20240523"
-readonly LINUX_GCC_FLOOR_CONTAINER="gcr.io/google.com/absl-177019/linux_gcc-floor:20230120"
+readonly LINUX_LATEST_CONTAINER="gcr.io/google.com/absl-177019/linux_hybrid-latest:20220217"
+readonly LINUX_GCC_FLOOR_CONTAINER="gcr.io/google.com/absl-177019/linux_gcc-floor:20220621"
 
 if [[ -z ${GTEST_ROOT:-} ]]; then
   GTEST_ROOT="$(realpath $(dirname ${0})/..)"
 fi
 
 if [[ -z ${STD:-} ]]; then
-  STD="c++14 c++17 c++20"
+  STD="c++11 c++14 c++17 c++20"
 fi
 
 # Test the CMake build
@@ -51,11 +51,11 @@ for cc in /usr/local/bin/gcc /opt/llvm/clang/bin/clang; do
       --workdir="/build" \
       --rm \
       --env="CC=${cc}" \
-      --env=CXXFLAGS="-Werror -Wdeprecated" \
+      --env="CXX_FLAGS=\"-Werror -Wdeprecated\"" \
       ${LINUX_LATEST_CONTAINER} \
       /bin/bash -c "
         cmake /src \
-          -DCMAKE_CXX_STANDARD=14 \
+          -DCMAKE_CXX_STANDARD=11 \
           -Dgtest_build_samples=ON \
           -Dgtest_build_tests=ON \
           -Dgmock_build_tests=ON \
@@ -67,23 +67,18 @@ for cc in /usr/local/bin/gcc /opt/llvm/clang/bin/clang; do
 done
 
 # Do one test with an older version of GCC
-# TODO(googletest-team): This currently uses Bazel 5. When upgrading to a
-# version of Bazel that supports Bzlmod, add --enable_bzlmod=false to keep test
-# coverage for the old WORKSPACE dependency management.
 time docker run \
   --volume="${GTEST_ROOT}:/src:ro" \
   --workdir="/src" \
   --rm \
   --env="CC=/usr/local/bin/gcc" \
-  --env="BAZEL_CXXOPTS=-std=c++14" \
   ${LINUX_GCC_FLOOR_CONTAINER} \
     /usr/local/bin/bazel test ... \
       --copt="-Wall" \
       --copt="-Werror" \
       --copt="-Wuninitialized" \
-      --copt="-Wundef" \
       --copt="-Wno-error=pragmas" \
-      --features=external_include_paths \
+      --distdir="/bazel-distdir" \
       --keep_going \
       --show_timestamps \
       --test_output=errors
@@ -102,10 +97,8 @@ for std in ${STD}; do
         --copt="-Wall" \
         --copt="-Werror" \
         --copt="-Wuninitialized" \
-        --copt="-Wundef" \
         --define="absl=${absl}" \
-        --enable_bzlmod=true \
-        --features=external_include_paths \
+        --distdir="/bazel-distdir" \
         --keep_going \
         --show_timestamps \
         --test_output=errors
@@ -127,10 +120,8 @@ for std in ${STD}; do
         --copt="-Wall" \
         --copt="-Werror" \
         --copt="-Wuninitialized" \
-        --copt="-Wundef" \
         --define="absl=${absl}" \
-        --enable_bzlmod=true \
-        --features=external_include_paths \
+        --distdir="/bazel-distdir" \
         --keep_going \
         --linkopt="--gcc-toolchain=/usr/local" \
         --show_timestamps \

@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: GestioneAttivita
+# Project: AttivitaLog
 # Configurations: Debug
 # =============================================================================
 
@@ -41,130 +41,107 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target GestioneAttivita
+# Object build statements for EXECUTABLE target attivita_log
 
 
 #############################################
-# Order-only phony target for GestioneAttivita
+# Order-only phony target for attivita_log
 
-build cmake_object_order_depends_target_GestioneAttivita: phony || CMakeFiles/GestioneAttivita.dir
+build cmake_object_order_depends_target_attivita_log: phony || CMakeFiles/attivita_log.dir
 
-build CMakeFiles/GestioneAttivita.dir/main.cpp.obj: CXX_COMPILER__GestioneAttivita_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/main.cpp || cmake_object_order_depends_target_GestioneAttivita
-  DEP_FILE = CMakeFiles\GestioneAttivita.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\GestioneAttivita.dir
-  OBJECT_FILE_DIR = CMakeFiles\GestioneAttivita.dir
+build CMakeFiles/attivita_log.dir/main.cpp.obj: CXX_COMPILER__attivita_log_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/main.cpp || cmake_object_order_depends_target_attivita_log
+  DEP_FILE = CMakeFiles\attivita_log.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita
+  OBJECT_DIR = CMakeFiles\attivita_log.dir
+  OBJECT_FILE_DIR = CMakeFiles\attivita_log.dir
 
-build CMakeFiles/GestioneAttivita.dir/attivita.cpp.obj: CXX_COMPILER__GestioneAttivita_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/attivita.cpp || cmake_object_order_depends_target_GestioneAttivita
-  DEP_FILE = CMakeFiles\GestioneAttivita.dir\attivita.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\GestioneAttivita.dir
-  OBJECT_FILE_DIR = CMakeFiles\GestioneAttivita.dir
+build CMakeFiles/attivita_log.dir/attivita.cpp.obj: CXX_COMPILER__attivita_log_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/attivita.cpp || cmake_object_order_depends_target_attivita_log
+  DEP_FILE = CMakeFiles\attivita_log.dir\attivita.cpp.obj.d
+  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita
+  OBJECT_DIR = CMakeFiles\attivita_log.dir
+  OBJECT_FILE_DIR = CMakeFiles\attivita_log.dir
 
-build CMakeFiles/GestioneAttivita.dir/lista_attivita.cpp.obj: CXX_COMPILER__GestioneAttivita_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/lista_attivita.cpp || cmake_object_order_depends_target_GestioneAttivita
-  DEP_FILE = CMakeFiles\GestioneAttivita.dir\lista_attivita.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\GestioneAttivita.dir
-  OBJECT_FILE_DIR = CMakeFiles\GestioneAttivita.dir
+build CMakeFiles/attivita_log.dir/lista_attivita.cpp.obj: CXX_COMPILER__attivita_log_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/lista_attivita.cpp || cmake_object_order_depends_target_attivita_log
+  DEP_FILE = CMakeFiles\attivita_log.dir\lista_attivita.cpp.obj.d
+  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita
+  OBJECT_DIR = CMakeFiles\attivita_log.dir
+  OBJECT_FILE_DIR = CMakeFiles\attivita_log.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target GestioneAttivita
+# Link build statements for EXECUTABLE target attivita_log
 
 
 #############################################
-# Link the executable GestioneAttivita.exe
+# Link the executable attivita_log.exe
 
-build GestioneAttivita.exe: CXX_EXECUTABLE_LINKER__GestioneAttivita_Debug CMakeFiles/GestioneAttivita.dir/main.cpp.obj CMakeFiles/GestioneAttivita.dir/attivita.cpp.obj CMakeFiles/GestioneAttivita.dir/lista_attivita.cpp.obj
+build attivita_log.exe: CXX_EXECUTABLE_LINKER__attivita_log_Debug CMakeFiles/attivita_log.dir/main.cpp.obj CMakeFiles/attivita_log.dir/attivita.cpp.obj CMakeFiles/attivita_log.dir/lista_attivita.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\GestioneAttivita.dir
+  OBJECT_DIR = CMakeFiles\attivita_log.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = GestioneAttivita.exe
-  TARGET_IMPLIB = libGestioneAttivita.dll.a
-  TARGET_PDB = GestioneAttivita.exe.dbg
+  TARGET_FILE = attivita_log.exe
+  TARGET_IMPLIB = libattivita_log.dll.a
+  TARGET_PDB = attivita_log.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target GestioneAttivitaApp
+# Object build statements for EXECUTABLE target attivita_log_test
 
 
 #############################################
-# Order-only phony target for GestioneAttivitaApp
+# Order-only phony target for attivita_log_test
 
-build cmake_object_order_depends_target_GestioneAttivitaApp: phony || CMakeFiles/GestioneAttivitaApp.dir
+build cmake_object_order_depends_target_attivita_log_test: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
 
-build CMakeFiles/GestioneAttivitaApp.dir/main.cpp.obj: CXX_COMPILER__GestioneAttivitaApp_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/main.cpp || cmake_object_order_depends_target_GestioneAttivitaApp
-  DEP_FILE = CMakeFiles\GestioneAttivitaApp.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\GestioneAttivitaApp.dir
-  OBJECT_FILE_DIR = CMakeFiles\GestioneAttivitaApp.dir
+build CMakeFiles/attivita_log_test.dir/Test/Test.cpp.obj: CXX_COMPILER__attivita_log_test_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/Test/Test.cpp || cmake_object_order_depends_target_attivita_log_test
+  DEP_FILE = CMakeFiles\attivita_log_test.dir\Test\Test.cpp.obj.d
+  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles\attivita_log_test.dir
+  OBJECT_FILE_DIR = CMakeFiles\attivita_log_test.dir\Test
 
-build CMakeFiles/GestioneAttivitaApp.dir/attivita.cpp.obj: CXX_COMPILER__GestioneAttivitaApp_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/attivita.cpp || cmake_object_order_depends_target_GestioneAttivitaApp
-  DEP_FILE = CMakeFiles\GestioneAttivitaApp.dir\attivita.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\GestioneAttivitaApp.dir
-  OBJECT_FILE_DIR = CMakeFiles\GestioneAttivitaApp.dir
+build CMakeFiles/attivita_log_test.dir/main.cpp.obj: CXX_COMPILER__attivita_log_test_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/main.cpp || cmake_object_order_depends_target_attivita_log_test
+  DEP_FILE = CMakeFiles\attivita_log_test.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles\attivita_log_test.dir
+  OBJECT_FILE_DIR = CMakeFiles\attivita_log_test.dir
+
+build CMakeFiles/attivita_log_test.dir/attivita.cpp.obj: CXX_COMPILER__attivita_log_test_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/attivita.cpp || cmake_object_order_depends_target_attivita_log_test
+  DEP_FILE = CMakeFiles\attivita_log_test.dir\attivita.cpp.obj.d
+  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles\attivita_log_test.dir
+  OBJECT_FILE_DIR = CMakeFiles\attivita_log_test.dir
+
+build CMakeFiles/attivita_log_test.dir/lista_attivita.cpp.obj: CXX_COMPILER__attivita_log_test_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/lista_attivita.cpp || cmake_object_order_depends_target_attivita_log_test
+  DEP_FILE = CMakeFiles\attivita_log_test.dir\lista_attivita.cpp.obj.d
+  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = CMakeFiles\attivita_log_test.dir
+  OBJECT_FILE_DIR = CMakeFiles\attivita_log_test.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target GestioneAttivitaApp
+# Link build statements for EXECUTABLE target attivita_log_test
 
 
 #############################################
-# Link the executable GestioneAttivitaApp.exe
+# Link the executable attivita_log_test.exe
 
-build GestioneAttivitaApp.exe: CXX_EXECUTABLE_LINKER__GestioneAttivitaApp_Debug CMakeFiles/GestioneAttivitaApp.dir/main.cpp.obj CMakeFiles/GestioneAttivitaApp.dir/attivita.cpp.obj
+build attivita_log_test.exe: CXX_EXECUTABLE_LINKER__attivita_log_test_Debug CMakeFiles/attivita_log_test.dir/Test/Test.cpp.obj CMakeFiles/attivita_log_test.dir/main.cpp.obj CMakeFiles/attivita_log_test.dir/attivita.cpp.obj CMakeFiles/attivita_log_test.dir/lista_attivita.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\GestioneAttivitaApp.dir
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\attivita_log_test.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = GestioneAttivitaApp.exe
-  TARGET_IMPLIB = libGestioneAttivitaApp.dll.a
-  TARGET_PDB = GestioneAttivitaApp.exe.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target GestioneAttivitaTests
-
-
-#############################################
-# Order-only phony target for GestioneAttivitaTests
-
-build cmake_object_order_depends_target_GestioneAttivitaTests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
-
-build CMakeFiles/GestioneAttivitaTests.dir/test.cpp.obj: CXX_COMPILER__GestioneAttivitaTests_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/test.cpp || cmake_object_order_depends_target_GestioneAttivitaTests
-  DEP_FILE = CMakeFiles\GestioneAttivitaTests.dir\test.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
-  OBJECT_DIR = CMakeFiles\GestioneAttivitaTests.dir
-  OBJECT_FILE_DIR = CMakeFiles\GestioneAttivitaTests.dir
-
-build CMakeFiles/GestioneAttivitaTests.dir/attivita.cpp.obj: CXX_COMPILER__GestioneAttivitaTests_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/attivita.cpp || cmake_object_order_depends_target_GestioneAttivitaTests
-  DEP_FILE = CMakeFiles\GestioneAttivitaTests.dir\attivita.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
-  OBJECT_DIR = CMakeFiles\GestioneAttivitaTests.dir
-  OBJECT_FILE_DIR = CMakeFiles\GestioneAttivitaTests.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target GestioneAttivitaTests
-
-
-#############################################
-# Link the executable GestioneAttivitaTests.exe
-
-build GestioneAttivitaTests.exe GestioneAttivitaTests[1]_tests.cmake | ${cmake_ninja_workdir}GestioneAttivitaTests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__GestioneAttivitaTests_Debug CMakeFiles/GestioneAttivitaTests.dir/test.cpp.obj CMakeFiles/GestioneAttivitaTests.dir/attivita.cpp.obj | lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
-  FLAGS = -g
-  LINK_LIBRARIES = lib/libgtest_main.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\GestioneAttivitaTests.dir
-  POST_BUILD = cmd.exe /C "cd /D C:\Users\frano\CLionProjects\ListaAttivita\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -D TEST_TARGET=GestioneAttivitaTests -D TEST_EXECUTABLE=C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/GestioneAttivitaTests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=GestioneAttivitaTests_TESTS -D CTEST_FILE=C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/GestioneAttivitaTests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/GoogleTestAddTests.cmake""
-  PRE_LINK = cd .
-  RESTAT = 1
-  TARGET_FILE = GestioneAttivitaTests.exe
-  TARGET_IMPLIB = libGestioneAttivitaTests.dll.a
-  TARGET_PDB = GestioneAttivitaTests.exe.dbg
+  TARGET_FILE = attivita_log_test.exe
+  TARGET_IMPLIB = libattivita_log_test.dll.a
+  TARGET_PDB = attivita_log_test.exe.dbg
 
 
 #############################################
@@ -341,8 +318,8 @@ build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depen
 
 build _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
   DEP_FILE = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
-  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googlemock/include -IC:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googlemock -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
+  FLAGS = -g -std=c++11 -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita -IC:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googlemock/include -IC:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googlemock -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\src
 
@@ -373,8 +350,8 @@ build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_
 
 build _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
   DEP_FILE = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
-  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googlemock/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googlemock -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
+  FLAGS = -g -std=c++11 -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googlemock/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googlemock -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src
 
@@ -487,8 +464,8 @@ build cmake_object_order_depends_target_gtest: phony || _deps/googletest-build/g
 
 build _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
   DEP_FILE = _deps\googletest-build\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
-  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -IC:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
+  FLAGS = -g -std=c++11 -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita -IC:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -IC:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest.dir\src
 
@@ -519,8 +496,8 @@ build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_
 
 build _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
   DEP_FILE = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
-  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
+  FLAGS = -g -std=c++11 -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -IC:/Users/frano/CLionProjects/ListaAttivita -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest/include -isystem C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src/googletest
   OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\src
 
@@ -620,11 +597,9 @@ build _deps/googletest-build/googletest/install/strip: phony _deps/googletest-bu
 # =============================================================================
 # Target aliases.
 
-build GestioneAttivita: phony GestioneAttivita.exe
+build attivita_log: phony attivita_log.exe
 
-build GestioneAttivitaApp: phony GestioneAttivitaApp.exe
-
-build GestioneAttivitaTests: phony GestioneAttivitaTests.exe
+build attivita_log_test: phony attivita_log_test.exe
 
 build gmock: phony lib/libgmock.a
 
@@ -650,7 +625,7 @@ build libgtest_main.a: phony lib/libgtest_main.a
 #############################################
 # Folder: C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug
 
-build all: phony GestioneAttivita.exe GestioneAttivitaApp.exe GestioneAttivitaTests.exe _deps/googletest-build/all
+build all: phony attivita_log.exe attivita_log_test.exe _deps/googletest-build/all
 
 # =============================================================================
 
@@ -680,14 +655,14 @@ build _deps/googletest-build/googletest/all: phony lib/libgtest.a lib/libgtest_m
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/GoogleTest.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/frano/CLionProjects/ListaAttivita/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPython.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPython/Support.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/frano/CLionProjects/ListaAttivita/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/GoogleTest.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/frano/CLionProjects/ListaAttivita/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FetchContent/CMakeLists.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPython.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPython/Support.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/frano/CLionProjects/ListaAttivita/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
 
 
 #############################################

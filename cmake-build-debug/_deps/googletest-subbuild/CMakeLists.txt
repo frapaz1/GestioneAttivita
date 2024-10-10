@@ -13,7 +13,7 @@ project(googletest-populate NONE)
 
 include(ExternalProject)
 ExternalProject_Add(googletest-populate
-                     "UPDATE_DISCONNECTED" "False" "DOWNLOAD_EXTRACT_TIMESTAMP" "TRUE" "URL" "https://github.com/google/googletest/archive/refs/heads/main.zip"
+                     "UPDATE_DISCONNECTED" "False" "DOWNLOAD_EXTRACT_TIMESTAMP" "TRUE" "URL" "https://github.com/google/googletest/archive/refs/tags/release-1.12.1.zip"
                     SOURCE_DIR          "C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src"
                     BINARY_DIR          "C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-build"
                     CONFIGURE_COMMAND   ""

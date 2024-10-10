@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.5)
 
 # Make file names absolute:
 #
-get_filename_component(filename "C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/main.zip" ABSOLUTE)
+get_filename_component(filename "C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.12.1.zip" ABSOLUTE)
 get_filename_component(directory "C:/Users/frano/CLionProjects/ListaAttivita/cmake-build-debug/_deps/googletest-src" ABSOLUTE)
 
 message(STATUS "extracting...

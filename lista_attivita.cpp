@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <stdexcept>
 
+ListaAttivita::ListaAttivita(const std::string& nomeLista) : nomeLista(nomeLista) {}
+
 void ListaAttivita::aggiungiAttivita(const Attivita& attivita) {
     auto it = std::find_if(elenco.begin(), elenco.end(), [&](const Attivita& a) {
         return a.getNome() == attivita.getNome();
@@ -17,10 +19,11 @@ void ListaAttivita::aggiungiAttivita(const Attivita& attivita) {
 
 void ListaAttivita::mostraElenco() const {
     if (elenco.empty()) {
-        std::cout << "Nessuna attivita presente." << std::endl;
+        std::cout << "Nessuna attivita presente nella lista '" << nomeLista << "'." << std::endl;
         return;
     }
 
+    std::cout << "Attivita nella lista '" << nomeLista << "':\n";
     for (const auto& attivita : elenco) {
         std::cout << "Nome: " << attivita.getNome()
                   << ", Descrizione: " << attivita.getDescrizione()
@@ -29,29 +32,78 @@ void ListaAttivita::mostraElenco() const {
     }
 }
 
-void ListaAttivita::contrassegnaComeCompletata(const std::string& nome) {
-    for (auto& attivita : elenco) {
-        if (attivita.getNome() == nome) {
-            attivita.setCompletata(true);
-            return;
+void ListaAttivita::contrassegnaComeCompletataAvanzata(const std::string& nome,
+                                                       const std::string& descrizione,
+                                                       const std::string& data) {
+    bool trovato = false;
+    std::string descrizioneInput = descrizione;
+    std::string dataInput = data;
+
+    if (!nome.empty()) {
+        for (auto& attivita : elenco) {
+            if (attivita.getNome() == nome) {
+                attivita.setCompletata(true);
+                std::cout << "Attivita '" << attivita.getNome() << "' contrassegnata come completata." << std::endl;
+                trovato = true;
+                return;
+            }
         }
     }
-    std::cout << "Attivita con nome '" << nome << "' non trovata." << std::endl;
+
+    if (!trovato && descrizioneInput.empty()) {
+        std::cout << "Nome non valido o attivita non trovata. Inserisci una descrizione: ";
+        std::getline(std::cin, descrizioneInput);
+    }
+
+    if (!descrizioneInput.empty()) {
+        for (auto& attivita : elenco) {
+            if (attivita.getDescrizione() == descrizioneInput) {
+                attivita.setCompletata(true);
+                std::cout << "Attivita con descrizione '" << attivita.getDescrizione() << "' contrassegnata come completata." << std::endl;
+                trovato = true;
+                return;
+            }
+        }
+    }
+
+    if (!trovato && dataInput.empty()) {
+        std::cout << "Descrizione non valida o attivita non trovata. Inserisci la data (YYYY-MM-DD): ";
+        std::getline(std::cin, dataInput);
+    }
+
+    if (!dataInput.empty()) {
+        for (auto& attivita : elenco) {
+            if (attivita.getData() == dataInput) {
+                attivita.setCompletata(true);
+                std::cout << "Attivita con data '" << attivita.getData() << "' contrassegnata come completata." << std::endl;
+                trovato = true;
+                return;
+            }
+        }
+    }
+
+    if (!trovato) {
+        std::cout << "Nessuna attivita corrispondente trovata." << std::endl;
+    }
 }
 
-Attivita* ListaAttivita::cercaAttivita(const std::string& nome) {
-    for (auto& attivita : elenco) {
-        if (attivita.getNome() == nome) {
-            return &attivita;
-        }
+
+void ListaAttivita::eliminaAttivita(const std::string& nome) {
+    auto it = std::remove_if(elenco.begin(), elenco.end(), [&](const Attivita& a) {
+        return a.getNome() == nome;
+    });
+    if (it != elenco.end()) {
+        elenco.erase(it, elenco.end());
+        std::cout << "Attivita con nome '" << nome << "' eliminata." << std::endl;
+    } else {
+        std::cout << "Attivita con nome '" << nome << "' non trovata." << std::endl;
     }
-    return nullptr;
 }
 
 void ListaAttivita::salvaSuDisco(const std::string& nomeFile) const {
     std::ofstream out(nomeFile);
     if (!out) {
-        throw std::ios_base::failure("Errore nell'apertura del file per la scrittura: " + nomeFile);
+        throw std::ios_base::failure("Impossibile aprire il file per la scrittura.");
     }
 
     for (const auto& attivita : elenco) {
@@ -62,18 +114,65 @@ void ListaAttivita::salvaSuDisco(const std::string& nomeFile) const {
 void ListaAttivita::caricaDaDisco(const std::string& nomeFile) {
     std::ifstream in(nomeFile);
     if (!in) {
-        throw std::ios_base::failure("Errore nell'apertura del file per la lettura: " + nomeFile);
+        std::cerr << "Impossibile aprire il file per la lettura." << std::endl;
+        return;
     }
 
-    elenco.clear();
-    std::string line;
-    while (std::getline(in, line)) {
-        if (line.empty()) continue;
-
+    std::string linea;
+    while (std::getline(in, linea)) {
         try {
-            elenco.push_back(Attivita(line));
+            elenco.push_back(Attivita(linea));
         } catch (const std::invalid_argument& e) {
-            std::cout << "Errore nella lettura della linea: " << e.what() << std::endl;
+            std::cerr << "Linea ignorata: " << e.what() << std::endl;
         }
     }
+}
+
+int ListaAttivita::getAttivitaNonCompletate() const {
+    return std::count_if(elenco.begin(), elenco.end(), [](const Attivita& a) {
+        return !a.isCompletata();
+    });
+}
+
+int ListaAttivita::getTotaleAttivita() const {
+    return elenco.size();
+}
+
+std::vector<Attivita> ListaAttivita::getAttivita() const {
+    return elenco;
+}
+
+std::string ListaAttivita::getNomeLista() const {
+    return nomeLista;
+}
+
+std::vector<Attivita> ListaAttivita::cercaAttivitaAvanzata(const std::string& nome,
+                                                           const std::string& descrizione,
+                                                           const std::string& data,
+                                                           bool completata,
+                                                           bool filtraPerStato) const {
+    std::vector<Attivita> risultati;
+
+    for (const auto& attivita : elenco) {
+        bool corrisponde = true;
+
+        if (!nome.empty() && attivita.getNome() != nome) {
+            corrisponde = false;
+        }
+        if (!descrizione.empty() && attivita.getDescrizione() != descrizione) {
+            corrisponde = false;
+        }
+        if (!data.empty() && attivita.getData() != data) {
+            corrisponde = false;
+        }
+        if (filtraPerStato && attivita.isCompletata() != completata) {
+            corrisponde = false;
+        }
+
+        if (corrisponde) {
+            risultati.push_back(attivita);
+        }
+    }
+
+    return risultati;
 }
