@@ -32,9 +32,9 @@ void ListaAttivita::mostraElenco() const {
     }
 }
 
-void ListaAttivita::contrassegnaComeCompletataAvanzata(const std::string& nome,
-                                                       const std::string& descrizione,
-                                                       const std::string& data) {
+void ListaAttivita::contrassegnaComeCompletata(const std::string& nome,
+                                               const std::string& descrizione,
+                                               const std::string& data) {
     bool trovato = false;
     std::string descrizioneInput = descrizione;
     std::string dataInput = data;
@@ -50,12 +50,7 @@ void ListaAttivita::contrassegnaComeCompletataAvanzata(const std::string& nome,
         }
     }
 
-    if (!trovato && descrizioneInput.empty()) {
-        std::cout << "Nome non valido o attivita non trovata. Inserisci una descrizione: ";
-        std::getline(std::cin, descrizioneInput);
-    }
-
-    if (!descrizioneInput.empty()) {
+    if (!trovato && !descrizioneInput.empty()) {
         for (auto& attivita : elenco) {
             if (attivita.getDescrizione() == descrizioneInput) {
                 attivita.setCompletata(true);
@@ -66,12 +61,7 @@ void ListaAttivita::contrassegnaComeCompletataAvanzata(const std::string& nome,
         }
     }
 
-    if (!trovato && dataInput.empty()) {
-        std::cout << "Descrizione non valida o attivita non trovata. Inserisci la data (YYYY-MM-DD): ";
-        std::getline(std::cin, dataInput);
-    }
-
-    if (!dataInput.empty()) {
+    if (!trovato && !dataInput.empty()) {
         for (auto& attivita : elenco) {
             if (attivita.getData() == dataInput) {
                 attivita.setCompletata(true);
@@ -86,7 +76,6 @@ void ListaAttivita::contrassegnaComeCompletataAvanzata(const std::string& nome,
         std::cout << "Nessuna attivita corrispondente trovata." << std::endl;
     }
 }
-
 
 void ListaAttivita::eliminaAttivita(const std::string& nome) {
     auto it = std::remove_if(elenco.begin(), elenco.end(), [&](const Attivita& a) {
@@ -146,7 +135,7 @@ std::string ListaAttivita::getNomeLista() const {
     return nomeLista;
 }
 
-std::vector<Attivita> ListaAttivita::cercaAttivitaAvanzata(const std::string& nome,
+std::vector<Attivita> ListaAttivita::cercaAttivita(const std::string& nome,
                                                            const std::string& descrizione,
                                                            const std::string& data,
                                                            bool completata,

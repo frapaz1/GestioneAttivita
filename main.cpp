@@ -18,7 +18,7 @@ void mostraRiepilogo(const std::vector<ListaAttivita>& liste) {
     }
 }
 
-void ricercaAvanzata(const std::vector<ListaAttivita>& liste) {
+void Ricerca(const std::vector<ListaAttivita>& liste) {
     std::string nomeLista, nomeAttivita, descrizione, data;
     bool completata = false;
     char filtraPerStato;
@@ -47,7 +47,7 @@ void ricercaAvanzata(const std::vector<ListaAttivita>& liste) {
 
     for (const auto& lista : liste) {
         if (nomeLista.empty() || lista.getNomeLista() == nomeLista) {
-            std::vector<Attivita> risultati = lista.cercaAttivitaAvanzata(nomeAttivita, descrizione, data, completata, filtraPerStato == 's');
+            std::vector<Attivita> risultati = lista.cercaAttivita(nomeAttivita, descrizione, data, completata, filtraPerStato == 's');
 
             if (!risultati.empty()) {
                 std::cout << "Risultati trovati nella lista '" << lista.getNomeLista() << "':\n";
@@ -76,7 +76,7 @@ int main() {
         std::cout << "3. Mostra tutte le liste\n";
         std::cout << "4. Contrassegna attivita come completata\n";
         std::cout << "5. Elimina attivita\n";
-        std::cout << "6. Cerca attivita (ricerca avanzata)\n";
+        std::cout << "6. Cerca attivita \n";
         std::cout << "7. Salva ed esci\n";
         std::cout << "Scelta: ";
         std::cin >> scelta;
@@ -132,7 +132,7 @@ int main() {
                 auto it = std::find_if(liste.begin(), liste.end(),
                                        [&](const ListaAttivita& l) { return l.getNomeLista() == nomeLista; });
                 if (it != liste.end()) {
-                    it->contrassegnaComeCompletataAvanzata(nomeAttivita);
+                    it->contrassegnaComeCompletata(nomeAttivita);
                 } else {
                     std::cout << "Lista non trovata.\n";
                 }
@@ -156,7 +156,7 @@ int main() {
                 break;
             }
             case 6:
-                ricercaAvanzata(liste);
+                Ricerca(liste);
                 break;
             case 7:
                 for (const auto& lista : liste) {

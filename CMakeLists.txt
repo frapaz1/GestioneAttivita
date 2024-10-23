@@ -7,19 +7,20 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 include_directories(${PROJECT_SOURCE_DIR})
 
 set(SOURCES
-        main.cpp
         attivita.cpp
         lista_attivita.cpp
+        main.cpp
 )
 
 add_executable(attivita_log ${SOURCES})
+
+list(REMOVE_ITEM SOURCES main.cpp)
 
 include(FetchContent)
 FetchContent_Declare(
         googletest
         URL https://github.com/google/googletest/archive/refs/tags/release-1.12.1.zip
 )
-
 FetchContent_MakeAvailable(googletest)
 
 enable_testing()
