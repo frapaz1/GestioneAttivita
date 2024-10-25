@@ -8,12 +8,12 @@
 
 void mostraRiepilogo(const std::vector<ListaAttivita>& liste) {
     for (const auto& lista : liste) {
-        int totale = lista.getTotaleAttivita();
-        int nonCompletate = lista.getAttivitaNonCompletate();
+        int totale = lista.getTotaleNum();
+        int nonCompletate = lista.getNumNonCompletate();
         std::cout << "Riepilogo per la lista '" << lista.getNomeLista() << "':\n";
         std::cout << "Totale attivita: " << totale << "\n";
         std::cout << "Attivita non completate: " << nonCompletate << "\n";
-        lista.mostraElenco();
+        std::cout << lista.toString();
         std::cout << std::endl;
     }
 }

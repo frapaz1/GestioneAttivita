@@ -10,24 +10,23 @@ public:
     ListaAttivita(const std::string& nomeLista);
 
     void aggiungiAttivita(const Attivita& attivita);
-    void mostraElenco() const;
+    std::string toString() const;
     void contrassegnaComeCompletata(const std::string& nome = "",
-                                            const std::string& descrizione = "",
-                                            const std::string& data = "");
+                                    const std::string& descrizione = "",
+                                    const std::string& data = "");
     void eliminaAttivita(const std::string& nome);
     void salvaSuDisco(const std::string& nomeFile) const;
     void caricaDaDisco(const std::string& nomeFile);
 
-    int getAttivitaNonCompletate() const;
-    int getTotaleAttivita() const;
-    std::vector<Attivita> getAttivita() const;
+    int getNumNonCompletate() const;
+    int getTotaleNum() const;
     std::string getNomeLista() const;
 
     std::vector<Attivita> cercaAttivita(const std::string& nome = "",
-                                                const std::string& descrizione = "",
-                                                const std::string& data = "",
-                                                bool completata = false,
-                                                bool filtraPerStato = false) const;
+                                        const std::string& descrizione = "",
+                                        const std::string& data = "",
+                                        bool completata = false,
+                                        bool filtraPerStato = false) const;
 
 private:
     std::string nomeLista;

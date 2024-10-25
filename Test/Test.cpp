@@ -67,7 +67,7 @@ TEST(ListaAttivitaTest, TestAggiungiAttivita) {
     Attivita attivita("Test Attività", "Descrizione di prova", "2024-10-03");
 
     EXPECT_NO_THROW(lista.aggiungiAttivita(attivita));
-    EXPECT_EQ(lista.getTotaleAttivita(), 1);
+    EXPECT_EQ(lista.getTotaleNum(), 1);
 }
 
 TEST(ListaAttivitaTest, TestEliminaAttivita) {
@@ -76,7 +76,7 @@ TEST(ListaAttivitaTest, TestEliminaAttivita) {
     lista.aggiungiAttivita(attivita);
 
     lista.eliminaAttivita("Test Attività");
-    EXPECT_EQ(lista.getTotaleAttivita(), 0);
+    EXPECT_EQ(lista.getTotaleNum(), 0);
 }
 
 TEST(ListaAttivitaTest, TestEliminaAttivitaNonEsistente) {
@@ -132,10 +132,10 @@ TEST(ListaAttivitaTest, TestGetAttivitaNonCompletate) {
     lista.aggiungiAttivita(attivita1);
     lista.aggiungiAttivita(attivita2);
 
-    EXPECT_EQ(lista.getAttivitaNonCompletate(), 2);
+    EXPECT_EQ(lista.getNumNonCompletate(), 2);
 
     lista.contrassegnaComeCompletata("Test Attività 1");
-    EXPECT_EQ(lista.getAttivitaNonCompletate(), 1);
+    EXPECT_EQ(lista.getNumNonCompletate(), 1);
 }
 
 TEST(ListaAttivitaTest, TestCercaAttivitaConFiltroCompletata) {
