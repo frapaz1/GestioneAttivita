@@ -155,3 +155,17 @@ TEST(ListaAttivitaTest, TestCercaAttivitaConFiltroCompletata) {
     EXPECT_EQ(risultatiNonCompletate.size(), 1);
     EXPECT_EQ(risultatiNonCompletate[0].getNome(), "Test Attività 2");
 }
+TEST(ListaAttivitaTest, TestToString) {
+    ListaAttivita lista("Lista di Prova");
+    Attivita attivita1("Test Attività 1", "Descrizione 1", "2024-10-03");
+    Attivita attivita2("Test Attività 2", "Descrizione 2", "2024-10-04");
+
+    lista.aggiungiAttivita(attivita1);
+    lista.aggiungiAttivita(attivita2);
+
+    std::string expectedOutput = "Attivita nella lista 'Lista di Prova':\n"
+                                 "Nome: Test Attività 1, Descrizione: Descrizione 1, Data: 2024-10-03, Completata: No\n"
+                                 "Nome: Test Attività 2, Descrizione: Descrizione 2, Data: 2024-10-04, Completata: No\n";
+
+    EXPECT_EQ(lista.toString(), expectedOutput);
+}

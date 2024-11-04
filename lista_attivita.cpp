@@ -12,7 +12,7 @@ void ListaAttivita::aggiungiAttivita(const Attivita& attivita) {
         return a.getNome() == attivita.getNome();
     });
     if (it != elenco.end()) {
-        std::cout << "Errore: esiste già un'attivita con il nome '" << attivita.getNome() << "'" << std::endl;
+        std::cerr << "Errore: esiste già un'attivita con il nome '" << attivita.getNome() << "'" << std::endl;
         return;
     }
     elenco.push_back(attivita);
@@ -44,7 +44,7 @@ void ListaAttivita::contrassegnaComeCompletata(const std::string& nome,
         for (auto& attivita : elenco) {
             if (attivita.getNome() == nome) {
                 attivita.setCompletata(true);
-                std::cout << "Attivita '" << attivita.getNome() << "' contrassegnata come completata." << std::endl;
+                std::cerr << "Attivita '" << attivita.getNome() << "' contrassegnata come completata." << std::endl;
                 trovato = true;
                 return;
             }
@@ -55,7 +55,7 @@ void ListaAttivita::contrassegnaComeCompletata(const std::string& nome,
         for (auto& attivita : elenco) {
             if (attivita.getDescrizione() == descrizione) {
                 attivita.setCompletata(true);
-                std::cout << "Attivita con descrizione '" << attivita.getDescrizione() << "' contrassegnata come completata." << std::endl;
+                std::cerr << "Attivita con descrizione '" << attivita.getDescrizione() << "' contrassegnata come completata." << std::endl;
                 trovato = true;
                 return;
             }
@@ -66,7 +66,7 @@ void ListaAttivita::contrassegnaComeCompletata(const std::string& nome,
         for (auto& attivita : elenco) {
             if (attivita.getData() == data) {
                 attivita.setCompletata(true);
-                std::cout << "Attivita con data '" << attivita.getData() << "' contrassegnata come completata." << std::endl;
+                std::cerr << "Attivita con data '" << attivita.getData() << "' contrassegnata come completata." << std::endl;
                 trovato = true;
                 return;
             }
@@ -74,7 +74,7 @@ void ListaAttivita::contrassegnaComeCompletata(const std::string& nome,
     }
 
     if (!trovato) {
-        std::cout << "Nessuna attivita corrispondente trovata." << std::endl;
+        std::cerr << "Nessuna attivita corrispondente trovata." << std::endl;
     }
 }
 
@@ -84,9 +84,9 @@ void ListaAttivita::eliminaAttivita(const std::string& nome) {
     });
     if (it != elenco.end()) {
         elenco.erase(it, elenco.end());
-        std::cout << "Attivita con nome '" << nome << "' eliminata." << std::endl;
+        std::cerr << "Attivita con nome '" << nome << "' eliminata." << std::endl;
     } else {
-        std::cout << "Attivita con nome '" << nome << "' non trovata." << std::endl;
+        std::cerr << "Attivita con nome '" << nome << "' non trovata." << std::endl;
     }
 }
 
